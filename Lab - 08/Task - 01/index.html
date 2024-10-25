@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Live Search</title>
+    <style>
+        /* Container to hold the label and input field side by side */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Styling for the label */
+        .search-container p {
+            margin-right: 10px; /* Space between label and input field */
+            font-weight: bold;
+        }
+
+        /* Simple styling for the input field */
+        .search-container input {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        /* Simple styling for suggestions */
+        .suggestions {
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            background-color: #fff;
+            z-index: 1000;
+        }
+        .suggestion-item {
+            padding: 8px;
+            cursor: pointer;
+        }
+        .suggestion-item:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Search</h1>
+    <div class="search-container">
+        <p>Input Field:</p>
+        <input type="text" id="search" autocomplete="off" placeholder="Type a name...">
+    </div>
+    <div id="suggestions" class="suggestions"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<!-- 
+Why Use the input Event?
+Real-Time Updates: The input event provides a way to respond immediately to changes in the input field, making it ideal for live search functionality where suggestions need to be updated dynamically as the user types.
+Supports All Input Methods: It captures changes from typing, pasting, and other modifications to the input field's value.
+-->

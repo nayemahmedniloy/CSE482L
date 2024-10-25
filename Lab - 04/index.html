@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css"> -->
+    <!-- Custom CSS -->
+    <!-- <style>
+        .error-message {
+            color: red;
+            font-size: 0.8rem;
+        }
+    </style> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Registration Form</h2>
+        <br>
+        <form id="registrationForm" novalidate class="d-flex flex-column justify-content-center">
+            <!-- Name and Username Side by Side -->
+            <div class="form-row">
+                <div class="form-group col-md-12 d-flex align-items-center">
+                    <label for="name" class="col-4 text-center">Name</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="name" name="name" required>
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+                </div>
+
+                <br>
+                
+                <div class="form-group col-md-12 d-flex align-items-center">
+                    <label for="username" class="col-4 text-center">Username</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="username" name="username" required>
+                        <div class="error-message" id="usernameError"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <!-- Password and Confirm Password Side by Side -->
+            <div class="form-row">
+                <div class="form-group col-md-12 d-flex align-items-center">
+                    <label for="password" class="col-4 text-center">Password</label>
+                    <div class="col-8">
+                        <input type="password" class="form-control" id="password" name="password" minlength="8" maxlength="32" required>
+                        <div class="error-message" id="passwordError"></div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="form-group col-md-12 d-flex align-items-center">
+                    <label for="confirmPassword" class="col-4 text-center">Confirm Password</label>
+                    <div class="col-8">
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                        <div class="error-message" id="confirmPasswordError"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-row">
+                <div class="form-group col-md-12 d-flex align-items-center">
+                    <label class="col-4 text-center">Gender</label>
+                    <div class="col-8">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                        <div class="error-message" id="genderError"></div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            
+            <!-- Contact Number and Email Side by Side -->
+            <div class="form-row">
+                <div class="form-group col-md-12 d-flex align-items-center">
+                    <label for="contactNumber" class="col-4 text-center">Contact Number</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" required>
+                        <div class="error-message" id="contactNumberError"></div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="form-group col-md-12 d-flex align-items-center">
+                    <label for="email" class="col-4 text-center">Email</label>
+                    <div class="col-8">
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            
+            <!-- Select College -->
+            <div class="form-row">
+                <div class="form-group col-md-12 d-flex align-items-center">
+                    <label for="college" class="col-4 text-center">Select College</label>
+                    <div class="col-8">
+                        <select class="form-control" id="college" name="college" required>
+                            <option value="">Select College</option>
+                            <option value="college1">College 1</option>
+                            <option value="college2">College 2</option>
+                            <option value="college3">College 3</option>
+                        </select>
+                        <div class="error-message" id="collegeError"></div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            
+            <!-- Programming Skills -->
+            <div class="form-group">
+                <div class="form-row">
+                    <label class="col-4 text-center">Programming Skills</label>
+                    <div class="col-8">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="java" name="skills" value="java">
+                            <label class="form-check-label" for="java">Java</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="android" name="skills" value="android">
+                            <label class="form-check-label" for="android">Android</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="ruby" name="skills" value="ruby">
+                            <label class="form-check-label" for="ruby">Ruby</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="dotnet" name="skills" value=".net">
+                            <label class="form-check-label" for="dotnet">.NET</label>
+                        </div>
+                        <div class="error-message" id="skillsError"></div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            
+            <!-- Submit Button -->
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary w-75">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (jQuery first, then Popper.js, then Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <!-- <script>
+        // Form validation
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            var isValid = true;
+
+            // Reset all errors
+            var errorElements = document.getElementsByClassName('error-message');
+            for (var i = 0; i < errorElements.length; i++) {
+                errorElements[i].textContent = '';
+            }
+
+            // Name validation
+            var nameInput = document.getElementById('name');
+            if (!nameInput.value.trim()) {
+                document.getElementById('nameError').textContent = 'Name cannot be empty';
+                isValid = false;
+            }
+
+            // Username validation
+            var usernameInput = document.getElementById('username');
+            if (!usernameInput.value.trim()) {
+                document.getElementById('usernameError').textContent = 'Username cannot be empty';
+                isValid = false;
+            } else if (usernameInput.value.indexOf(' ') >= 0) {
+                document.getElementById('usernameError').textContent = 'Username cannot contain whitespace';
+                isValid = false;
+            }
+
+            // Password validation
+            var passwordInput = document.getElementById('password');
+            var confirmPasswordInput = document.getElementById('confirmPassword');
+            if (passwordInput.value.length < 8 || passwordInput.value.length > 32) {
+                document.getElementById('passwordError').textContent = 'Password must be between 8 to 32 characters';
+                isValid = false;
+            } else if (passwordInput.value !== confirmPasswordInput.value) {
+                document.getElementById('confirmPasswordError').textContent = 'Passwords do not match';
+                isValid = false;
+            }
+
+            // Gender validation
+            var genderInputs = document.querySelectorAll('input[name="gender"]');
+            var genderSelected = false;
+            for (var i = 0; i < genderInputs.length; i++) {
+                if (genderInputs[i].checked) {
+                    genderSelected = true;
+                    break;
+                }
+            }
+            if (!genderSelected) {
+                document.getElementById('genderError').textContent = 'Please select a gender';
+                isValid = false;
+            }
+
+            // Contact Number validation
+            var contactNumberInput = document.getElementById('contactNumber');
+            if (!contactNumberInput.value.match(/^\d{10}$/)) {
+                document.getElementById('contactNumberError').textContent = 'Contact number should contain exactly 10 digits';
+                isValid = false;
+            }
+
+            // Skills validation
+            var skillsInputs = document.querySelectorAll('input[name="skills"]:checked');
+            if (skillsInputs.length === 0) {
+                document.getElementById('skillsError').textContent = 'Please select at least one programming skill';
+                isValid = false;
+            }
+
+            // College validation
+            var collegeInput = document.getElementById('college');
+            if (!collegeInput.value) {
+                document.getElementById('collegeError').textContent = 'Please select a college';
+                isValid = false;
+            }
+
+            // Prevent form submission if not valid
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script> -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

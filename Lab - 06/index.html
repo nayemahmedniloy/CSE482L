@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form action="process_form.php" method="POST" novalidate>
+        <!-- Username -->
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <span class="error" id="usernameError"></span>
+        </div>
+
+        <!-- Password -->
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span class="error" id="passwordError"></span>
+        </div>
+
+        <!-- Confirm Password -->
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span class="error" id="confirmPasswordError"></span>
+        </div>
+
+        <!-- Email -->
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="emailError"></span>
+        </div>
+
+        <!-- Mobile Number -->
+        <div>
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" required>
+            <span class="error" id="mobileError"></span>
+        </div>
+
+        <!-- Zip Code -->
+        <div>
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip" required>
+            <span class="error" id="zipError"></span>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

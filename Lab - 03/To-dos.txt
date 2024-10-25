@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+1) Work on footers
+2) Make Coontact Form Functional
+3) update email and phone number 
+4) Arrows of testimonial
+5) update project showcase
+6) social media icon update
+7) resume update. better add google docx.
+8) overlap of white and whitesmoke background
+9) up-arrow
+10) Add a animation and a transition
+=======
+1) Work on footers
+2) Make Coontact Form Functional
+3) update email and phone number 
+4) Arrows of testimonial
+5) update project showcase
+6) social media icon update
+7) resume update. better add google docx.
+8) overlap of white and whitesmoke background
+9) up-arrow
+10) Add a animation and a transition
+>>>>>>> origin/main
+11) Redo using Reactjs
